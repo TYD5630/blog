@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.0.3"><!-- SEO --><title>Astro 博客搭建指南</title><meta name="description" content="从零开始使用 Astro + Tailwind CSS 搭建个人博客"><link rel="canonical" href="https://tyd5630.github.io/posts/astro-guide/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:url" content="https://tyd5630.github.io/posts/astro-guide/"><meta property="og:title" content="Astro 博客搭建指南"><meta property="og:description" content="从零开始使用 Astro + Tailwind CSS 搭建个人博客"><meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tyd5630.github.io/posts/astro-guide/"><meta property="twitter:title" content="Astro 博客搭建指南"><meta property="twitter:description" content="从零开始使用 Astro + Tailwind CSS 搭建个人博客"><meta property="twitter:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200"><!-- RSS --><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></head> <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col"> <header class="border-b border-gray-200 dark:border-gray-800"> <nav class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between"> <a href="/" class="text-xl font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+TYD Blog
+</a> <div class="flex items-center gap-6"> <a href="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">博客</a> <a href="/search" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">搜索</a> <a href="/rss.xml" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-label="RSS Feed"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path></svg> </a> <button id="theme-toggle" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" aria-label="Toggle theme"> <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg> <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> </div> </nav> </header> <main class="max-w-4xl mx-auto px-4 py-8 flex-1">  <article class="prose dark:prose-invert prose-lg max-w-none"> <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200" alt="Astro 博客搭建指南" class="w-full h-64 md:h-96 object-cover rounded-xl mb-8"> <header class="mb-8"> <h1 class="text-4xl font-bold mb-4">Astro 博客搭建指南</h1> <div class="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400"> <time datetime="2026-03-12T00:00:00.000Z"> 2026年3月12日 </time>  <div class="flex gap-2"> <a href="/tags/Astro" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"> Astro </a><a href="/tags/教程" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"> 教程 </a><a href="/tags/前端" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"> 前端 </a> </div> </div> </header>  <h1 id="astro-博客搭建指南">Astro 博客搭建指南</h1>
+<h2 id="为什么选择-astro">为什么选择 Astro？</h2>
+<p>Astro 是一个专注于内容驱动的静态站点生成器，具有以下优势：</p>
+<ol>
+<li><strong>零 JS 默认</strong> - 只在需要时使用 JavaScript</li>
+<li><strong>组件化</strong> - 支持 React、Vue、Svelte 等多种框架</li>
+<li><strong>内容集合</strong> - 强大的内容管理和类型安全</li>
+<li><strong>性能优先</strong> - 自动优化图片和静态资源</li>
+</ol>
+<h2 id="快速开始">快速开始</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 创建新项目</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> create</span><span style="color:#9ECBFF"> astro@latest</span><span style="color:#9ECBFF"> my-blog</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 选择模板</span></span>
+<span class="line"><span style="color:#B392F0">-</span><span style="color:#9ECBFF"> Empty</span></span>
+<span class="line"><span style="color:#B392F0">-</span><span style="color:#9ECBFF"> Minimal</span></span>
+<span class="line"><span style="color:#B392F0">-</span><span style="color:#9ECBFF"> Blog</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 启动开发服务器</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> my-blog</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> dev</span></span></code></pre>
+<h2 id="添加-tailwind">添加 Tailwind</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> astro</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> tailwind</span></span></code></pre>
+<h2 id="项目结构">项目结构</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>my-blog/</span></span>
+<span class="line"><span>├── src/</span></span>
+<span class="line"><span>│   ├── content/</span></span>
+<span class="line"><span>│   │   └── blog/</span></span>
+<span class="line"><span>│   │       └── your-post.md</span></span>
+<span class="line"><span>│   ├── layouts/</span></span>
+<span class="line"><span>│   ├── components/</span></span>
+<span class="line"><span>│   └── pages/</span></span>
+<span class="line"><span>├── public/</span></span>
+<span class="line"><span>└── astro.config.mjs</span></span></code></pre>
+<h2 id="部署到-github-pages">部署到 GitHub Pages</h2>
+<p>创建 <code>.github/workflows/deploy.yml</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Deploy to GitHub Pages</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">on</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  push</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">    branches</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">main</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">jobs</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  build</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">    runs-on</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="color:#85E89D">    steps</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/checkout@v4</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/setup-node@v4</span></span>
+<span class="line"><span style="color:#85E89D">        with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">          node-version</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm ci</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">run</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">npm run build</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">uses</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">actions/upload-pages-artifact@v3</span></span>
+<span class="line"><span style="color:#85E89D">        with</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">          path</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">./dist</span></span></code></pre>
+<h2 id="总结">总结</h2>
+<p>Astro 为博客提供了一个高性能、易扩展的基础，是现代静态网站的理想选择。</p>
+<p>Happy coding! 🚀</p>  <hr class="my-8 border-gray-200 dark:border-gray-700"> <!-- Giscus 评论 --> <div class="giscus-wrapper mt-8"> <script src="https://giscus.app/client.js" data-repo="tyd5630/blog" data-repo-id="R_kgDOxxx" data-category="Comments" data-category-id="DIC_kwDOxxx" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async>
+      </script> </div> </article>  </main> <footer class="border-t border-gray-200 dark:border-gray-800 mt-auto"> <div class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400"> <p>&copy; 2026 TYD Blog. All rights reserved.</p> </div> </footer> <script>
+      // Theme toggle
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+    
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    
+      window.localStorage.setItem('theme', theme);
+    
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script> </body> </html>
